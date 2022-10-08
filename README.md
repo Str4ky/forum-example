@@ -30,7 +30,7 @@ $passwd = "";
 
 __Type de membre :__
 
-<li>Non connecté : Peut uniquement lire les articles</li>
+<li>Non connecté : Peut uniquement lire les articles et voir le profil d'un utilisateur</li>
 <li>Utilisateur : Peut créer et répondres aux articles</li>
 <li>Modérateur : Peut supprimer des articles ou des messages</li>
 <li>Administrateur : Peut administrer les membres, créer, supprimer et modifier des catégories et des articles</li>
