@@ -66,7 +66,7 @@ Pour customiser le forul à votre goût, vous pouvez premièrement changer la co
 }
 ```
 
-Vous pouvez aussi changer le logo se situant dans `assets/images`
+Vous pouvez aussi changer les logos se situant dans `assets/images`
 
 Si les icônes de certification ou de type de membres ne vous plaisent pas, vous pouvez les changer dans ce fichier `config/badges.php`
 
