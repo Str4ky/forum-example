@@ -22,9 +22,9 @@ Dans le fichier __config/database.php__ changez ces 4 lignes avec les logins de 
 
 ```
 $host = "localhost";
-$database = "auth";
+$bdd = "forum";
 $user = "root";
-$password = "";
+$passwd = "";
 ```
 
 <br>
