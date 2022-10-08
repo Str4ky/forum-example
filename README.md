@@ -17,7 +17,7 @@ __Utilisation :__
 
 Importer le fichier __forum.sql__ sur votre base de donnée à l'aide de votre outil favori
 
-Dans le fichier __config/database.php__ changez ces 4 lignes avec les logins de votre base de données
+Dans le fichier __config/database.php__ changez ces 4 lignes avec les identifiants de votre base de données
 
 ```
 $host = "localhost";
