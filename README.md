@@ -4,13 +4,12 @@ Exemple complet de forum en PHP
 
 __Fonctionnalités :__
 
-<li>Création de compte</li>
-<li>Connexion au compte</li>
-<li>Modification d'identifiant et de mot de passe</li>
-<li>Création de catégories, rubriques et d'articles</li>
-<li>Lecture de post et réponse à ceux-ci</li>
-<li>Administration du type et des permissions des membres</li>
-<li>Suppression de comptes</li>
+<li>Création et connexion à un compte</li>
+<li>Modification d'identifiant, d'email et de mot de passe ou suppression du compte</li>
+<li>Création de catégories, rubriques et d'articles en étant administrateur</li>
+<li>Suppression d'articles et de messages étant modérateur</li>
+<li>Lecture d'articles et réponse à ceux-ci étant connecté</li>
+<li>Administration du type et des permissions des membres ainsi que la suppression de comptes</li>
 
 <br>
 
