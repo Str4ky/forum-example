@@ -47,7 +47,7 @@ Vous pouvez aussi le faire en réalisant cette requette SQL ```UPDATE membre SET
 
 __Personalisation :__
 
-Pour customiser le forul à votre goût, vous pouvez premièrement changer la couleur du site en changeant le bloc "root" dans `assets/css/style.css`
+Pour customiser le forum à votre goût, vous pouvez premièrement changer la couleur du site en changeant le bloc "root" dans `assets/css/style.css`
 
 ```css
 :root {
