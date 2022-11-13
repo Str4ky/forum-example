@@ -91,11 +91,11 @@
               echo "<p>Il n'y a pas d'utilisateur à administrer</p><a class='button cl1' href='../'>Retourner à l'accueil</a><br><br></div></center>";
             }
             else {
-			        #On récupère les informations du membre
+	      #On récupère les informations du membre
               $requete1 = "SELECT typeMemb FROM membre WHERE idMemb = '{$_SESSION['email']}'";
               $resultat1 = $cnn->query($requete1) or die(print_r($bdd->errorInfo()));
               while($row1 = $resultat1->fetch()){
-						    #Si l'utilisateur est administrateur
+		#Si l'utilisateur est administrateur
                 if($row1['typeMemb'] == '0'){
                   echo "
                   <p>Modifier les permissions d'un utilisateur :</p><br>
