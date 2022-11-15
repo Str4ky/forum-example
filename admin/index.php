@@ -40,12 +40,12 @@
           }
       }
 
-	    #Si l'utilisateur est connecté
+      #Si l'utilisateur est connecté
       if($_SESSION['email'] != ''){
         $requete = "SELECT pseudoMemb, typeMemb FROM membre WHERE idMemb = '{$_SESSION['email']}'";
         $resultat = $cnn->query($requete) or die(print_r($bdd->errorInfo()));
         while($row = $resultat->fetch()){
-			    #On affiche la barre du haut du site selon son type
+	  #On affiche la barre du haut du site selon son type
           if($row['typeMemb'] == '0'){
             echo "<a href='../'><img class='logo' src='../assets/images/logo.png'></img></a> </a><p class='username admin'>{$row['pseudoMemb']}</p> <a href='../script/logout.php' class='button cl2' style='float: right;'>Déconnexion <i class='fas fa-sign-out-alt'></i></a> <a href='../account' class='button cl1' style='float: right;'>Mon compte <i class='fas fa-user-edit'></i></a> <a href='./' class='button cl3' style='float: right;'>Administration <i class='fas fa-user-shield'></i></a>";
           }
