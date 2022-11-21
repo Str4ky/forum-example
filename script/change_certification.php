@@ -9,11 +9,24 @@
         $certif = $_POST['certif'];
         $id = $_POST['email'];
 
-        #On change la certification
-        $requete = "UPDATE membre SET certifMemb='$certif' WHERE idMemb='$id'";
-        $cnn->exec($requete) or die(print_r($bdd->errorInfo()));
-        header("Location: ../admin");
-        $cnn = null;
+        #On récupère les informations de la certification
+        $requete = "SELECT certifMemb FROM membre WHERE idMemb = '$id'";
+        $resultat = $cnn->query($requete) or die(print_r($bdd->errorInfo()));
+        while($row = $resultat->fetch()){
+            #Si la certification est la même
+            if($row['certifMemb'] != $certif) {
+                #On change la certification
+                $requete2 = "UPDATE membre SET certifMemb='$certif' WHERE idMemb='$id'";
+                $cnn->exec($requete2) or die(print_r($bdd->errorInfo()));
+                header("Location: ../admin");
+                $cnn = null;
+            }
+            else {
+                echo "<script language='Javascript'>
+                document.location.replace('../admin');
+                </script>";
+            }
+        }
     }
     #On ramène l'utilisateur à l'accueil
     else {
