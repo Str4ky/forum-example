@@ -149,7 +149,10 @@
       else {
         echo"<center><p>Il n'y a pas de rubrique définie</p></center>";
       }
-      echo"<center><a href='../article/add?rubrique={$_GET['rubrique']}' class='button cl1' style='text-decoration: none; text-align: center;'>Ajouter un nouvel article <i class='fa fa-plus' aria-hidden='true'></i></a>";
+      #Si l'utilisateur est connecté
+      if($_SESSION['email'] != '') {
+        echo"<center><a href='../article/add?rubrique={$_GET['rubrique']}' class='button cl1' style='text-decoration: none; text-align: center;'>Ajouter un nouvel article <i class='fa fa-plus' aria-hidden='true'></i></a>";
+      }
       if($_SESSION['email'] != ''){
         $requete4 = "SELECT typeMemb FROM membre WHERE idMemb = '{$_SESSION['email']}'";
         $resultat4 = $cnn->query($requete4) or die(print_r($bdd->errorInfo()));
