@@ -9,11 +9,24 @@
         $type = $_POST['type'];
         $id = $_POST['email'];
 
-        #On change le type de l'utilisateur
-        $requete = "UPDATE membre SET typeMemb='$type' WHERE idMemb='$id'";
-        $cnn->exec($requete) or die(print_r($bdd->errorInfo()));
-        header("Location: ../admin");
-        $cnn = null;
+        #On récupère les informations du type
+        $requete = "SELECT typeMemb FROM membre WHERE idMemb = '$id'";
+        $resultat = $cnn->query($requete) or die(print_r($bdd->errorInfo()));
+        while($row = $resultat->fetch()){
+            #Si la certification est la même
+            if($row['typeMemb'] != $type) {
+                #On change le type de l'utilisateur
+                $requete2 = "UPDATE membre SET typeMemb='$type' WHERE idMemb='$id'";
+                $cnn->exec($requete2) or die(print_r($bdd->errorInfo()));
+                header("Location: ../admin");
+                $cnn = null;
+            }
+            else {
+                echo "<script language='Javascript'>
+                document.location.replace('../admin');
+                </script>";
+            }
+        }
     }
     #On redirige l'utilisateur à l'accueil
     else {
