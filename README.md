@@ -81,7 +81,7 @@ Pour rajouter une icône dans la liste déroulante lors de la création ou l'éd
 ```html
 <option value='classe FontAwesome'>Nom de l'icône</option>
 ```
-Il faut renseigner la classe d'une icône FintAwesome ainsi qu'un nom pour l'icône
+Il faut renseigner la classe d'une icône FontAwesome ainsi qu'un nom pour l'icône
 
 <br>
 
