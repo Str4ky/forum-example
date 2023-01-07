@@ -138,7 +138,7 @@
                 <option value='fa-solid fa-house'>Maison</option>
                 <option value='fa-solid fa-car'>Voiture</option>
                 <option value='fa-solid fa-sailboat'>Bateau</option>
-                <option value='fa-solid fa-anchor'>Enclume</option>
+                <option value='fa-solid fa-anchor'>Ancre</option>
                 <option value='fa-solid fa-paper-plane'>Avion en papier</option>
                 <option value='fa-solid fa-fish'>Poisson</option>
                 <option value='fa-solid fa-burger'>Hamburger</option>
