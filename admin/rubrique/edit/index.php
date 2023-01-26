@@ -117,11 +117,11 @@
                     }
                     echo "
                     </select><br><br>
-                    <label for='nom'>Nom de la catégorie</label><br><br>
+                    <label for='nom'>Nom de la rubrique</label><br><br>
                     <input type='text' name='nom' id='nom' placeholder='Entrez le nom de la rubrique' required/><br><br>
-                    <label for='nom'>Description de la catégorie</label><br><br>
+                    <label for='nom'>Description de la rubrique</label><br><br>
                     <input type='text' name='desc' id='desc' placeholder='Entrez la description de la rubrique' required/><br>
-                    <input type='submit' value='Modifier la catégorie' class='button cl3'/>
+                    <input type='submit' value='Modifier la rubrique' class='button cl3'/>
                     </form></center>
                     </div>";
                   }
