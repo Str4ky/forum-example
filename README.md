@@ -2,6 +2,8 @@
 
 Exemple complet de forum en PHP
 
+<img src="preview.png" alt="Prévisualisation">
+
 __Fonctionnalités :__
 
 <li>Création et connexion à un compte</li>
