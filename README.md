@@ -17,7 +17,7 @@ __Fonctionnalités :__
 
 __Utilisation :__
 
-Importer le fichier __forum.sql__ sur votre base de donnée à l'aide de votre outil favori
+Importez le fichier __forum.sql__ sur votre base de données à l'aide de votre outil favori
 
 Dans le fichier __config/database.php__ changez ces 4 lignes avec les identifiants de connexion à votre base de données
 
