@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Forum</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="https://rawcdn.githack.com/hung1001/font-awesome-pro-v6/44659d9/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <link rel=icon type=image/png href="../assets/images/favicon.png"/>
   </head>
   <header>
@@ -48,7 +48,7 @@
         while($row = $resultat->fetch()){
 			    #On affiche la barre du haut du site selon son type
           if($row['typeMemb'] == '0'){
-            echo "<a href='../'><img class='logo' src='../assets/images/logo.png'></img></a> </a><p class='username admin'>{$row['pseudoMemb']}</p> <a href='../script/logout.php' class='button cl2' style='float: right;'>Déconnexion <i class='fas fa-sign-out-alt'></i></a> <a href='../account' class='button cl1' style='float: right;'>Mon compte <i class='fas fa-user-edit'></i></a> <a href='./' class='button cl3' style='float: right;'>Administration <i class='fas fa-user-shield'></i></a>";
+            echo "<a href='../'><img class='logo' src='../assets/images/logo.png'></img></a> </a><p class='username admin'>{$row['pseudoMemb']}</p> <a href='../script/logout.php' class='button cl2' style='float: right;'>Déconnexion <i class='fas fa-sign-out-alt'></i></a> <a href='../account' class='button cl1' style='float: right;'>Mon compte <i class='fas fa-user-edit'></i></a> <a href='../admin' class='button cl3' style='float: right;'>Administration <i class='fas fa-user-shield'></i></a>";
           }
           else if($row['typeMemb'] == '1' OR $row['typeMemb'] == '2'){
             echo"<a href='../'><img class='logo' src='../assets/images/logo.png'></img></a> </a><a class='username user'>{$row['pseudoMemb']}</a> <a href='../script/logout.php' class='button cl2' style='float: right;'>Déconnexion <i class='fas fa-sign-out-alt'></i></a> <a href='../account' class='button cl1' style='float: right;'>Mon compte <i class='fas fa-user-edit'></i></a>";
@@ -151,7 +151,7 @@
                       echo"<center><p class='article'>Posté par ";
                       if($row6['typeMemb'] == 2) {
                         if($row6['certifMemb'] == 1) {
-                          echo "<a href='../user?user={$row6['pseudoMemb']}' style='color: white;'>{$row6['pseudoMemb']}</a> <i class='fa-solid fa-badge-check' title='Utilisateur vérifié'></i>";
+                          echo "<a href='../user?user={$row6['pseudoMemb']}' style='color: white;'>{$row6['pseudoMemb']}</a> <i class='$certif' title='Utilisateur vérifié'></i>";
                         }
                         else {
                           echo "<a href='../user?user={$row6['pseudoMemb']}' style='color: white;'>{$row6['pseudoMemb']}</a>";
@@ -159,21 +159,21 @@
                       }
                       else if($row6['typeMemb'] == 1) {
                         if($row6['certifMemb'] == 1) {
-                          echo "<a href='../user?user={$row6['pseudoMemb']}' style='color: white;'>{$row6['pseudoMemb']}</a> <i class='fa-solid fa-badge-check' title='Utilisateur vérifié'></i> <i class='fa-solid fa-gears' title='Modérateur'></i>";
+                          echo "<a href='../user?user={$row6['pseudoMemb']}' style='color: white;'>{$row6['pseudoMemb']}</a> <i class='$certif' title='Utilisateur vérifié'></i> <i class='$mod' title='Modérateur'></i>";
                         }
                         else {
-                          echo "<a href='../user?user={$row6['pseudoMemb']}' style='color: white;'>{$row6['pseudoMemb']}</a> <i class='fa-solid fa-gears' title='Modérateur'></i>";
+                          echo "<a href='../user?user={$row6['pseudoMemb']}' style='color: white;'>{$row6['pseudoMemb']}</a> <i class='$mod' title='Modérateur'></i>";
                         }
                       }
                       else if($row6['typeMemb'] == 0) {
                         if($row6['certifMemb'] == 1) {
-                          echo "<a href='../user?user={$row6['pseudoMemb']}' style='color: white;'>{$row6['pseudoMemb']}</a> <i class='fa-solid fa-badge-check' title='Utilisateur vérifié'></i> <i class='fa-solid fa-shield-halved' title='Administrateur'></i>";
+                          echo "<a href='../user?user={$row6['pseudoMemb']}' style='color: white;'>{$row6['pseudoMemb']}</a> <i class='$certif' title='Utilisateur vérifié'></i> <i class='$admin' title='Administrateur'></i>";
                         }
                         else {
-                          echo "<a href='../user?user={$row6['pseudoMemb']}' style='color: white;'>{$row6['pseudoMemb']}</a> <i class='fa-solid fa-shield-halved' title='Administrateur'></i>";
+                          echo "<a href='../user?user={$row6['pseudoMemb']}' style='color: white;'>{$row6['pseudoMemb']}</a> <i class='$admin' title='Administrateur'></i>";
                         }
                       }
-                      echo " le {$row5['dateRep']}<br><br>{$row5['contenuRep']}</p></center><br><p class='post'><a href='#message' style='color: white; text-decoration: none;'>Envie de poster une réponse ?</a></p>";
+                      echo " le {$row5['dateRep']}<br><br>{$row5['contenuRep']}</p></center><br><p class='post'></p>";
                     }
                   }
                 }
@@ -186,6 +186,9 @@
                 <input type='text' name='message' id='message' placeholder='Entrez votre message' required/>
                 <input type='submit' value='Envoyer' class='button cl1' style='margin-left: 12px; id='message'/>
                 </form>";
+              }
+              else {
+                echo "<a href='../register' style='color: white; text-decoration: none;'>Envie de poster une réponse ?</a>";
               }
               $requete7 = "SELECT typeMemb FROM membre WHERE idMemb = '{$_SESSION['email']}'";
               $resultat7 = $cnn->query($requete7) or die(print_r($bdd->errorInfo()));

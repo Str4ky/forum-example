@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Forum</title>
     <link rel="stylesheet" href="../../assets/css/style.css">
-    <link rel="stylesheet" href="https://rawcdn.githack.com/hung1001/font-awesome-pro-v6/44659d9/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <link rel=icon type=image/png href="../../assets/images/favicon.png"/>
   </head>
   <header>
@@ -95,7 +95,7 @@
             <center><form method='post' action='../../script/add_article.php?rubrique={$_GET['rubrique']}'>
             <label for='nom'>Nom du nouvel article</label><br><br>
             <input type='text' name='nom' id='nom' placeholder='Entrez le nom du nouvel article' required/><br>
-            <label for='nom'>Nom du contenu du nouvel article</label><br><br>
+            <label for='nom'>Contenu du nouvel article</label><br><br>
             <input type='text' name='contenu' id='contenu' placeholder='Entrez le contenu du nouvel article' required/><br>
             <input type='submit' value='Ajouter un nouvel article' class='button cl1'/>
             </form></center>

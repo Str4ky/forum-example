@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Forum</title>
     <link rel="stylesheet" href="../../../assets/css/style.css">
-    <link rel="stylesheet" href="https://rawcdn.githack.com/hung1001/font-awesome-pro-v6/44659d9/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
     <link rel=icon type=image/png href="../../../assets/images/favicon.png"/>
   </head>
   <header>
@@ -96,8 +96,6 @@
             <select name='icon' id='icon' onchange='change_icon(this);'>
             <option value=''>Aucune</option>
             <option value='fa-solid fa-book'>Livre</option>
-            <option value='fa-solid fa-book-copy'>Double livre</option>
-            <option value='fa-solid fa-book-open-cover'>Livre ouvert</option>
             <option value='fa-solid fa-pen'>Crayon</option>
             <option value='fa-solid fa-file-pen'>Crayon et feuille</option>
             <option value='fa-solid fa-newspaper'>Journal</option>
@@ -118,8 +116,7 @@
             <option value='fa-solid fa-film'>Pellicule</option>
             <option value='fa-solid fa-at'>Arobase</option>
             <option value='fa-solid fa-paperclip'>Trombone</option>
-            <option value='fa-solid fa-gamepad-modern'>Manette</option>
-            <option value='fa-solid fa-joystick'>Joystick</option>
+            <option value='fa-solid fa-gamepad'>Manette</option>
             <option value='fa-solid fa-phone'>Téléphone</option>
             <option value='fa-solid fa-mobile-screen'>Smartphone</option>
             <option value='fa-solid fa-earth-americas'>Terre</option>  
@@ -131,7 +128,6 @@
             <option value='fa-solid fa-fish'>Poisson</option>
             <option value='fa-solid fa-burger'>Hamburger</option>
             <option value='fa-solid fa-apple-whole'>Pomme</option>
-            <option value='fa-solid fa-glass-half'>Verre</option>
             <option value='fa-solid fa-mug-hot'>Tasse</option>
             <option value='fa-solid fa-star'>Étoile</option>
             <option value='fa-solid fa-sun'>Soleil</option>
@@ -140,19 +136,13 @@
             <option value='fa-solid fa-heart'>Coeur</option>
             <option value='fa-solid fa-square'>Carré</option>
             <option value='fa-solid fa-diamond'>Losange</option>
-            <option value='fa-solid fa-rectangle-wide'>Rectangle</option>
-            <option value='fa-solid fa-triangle'>Triangle</option>
             <option value='fa-solid fa-circle'>Cercle</option>
-            <option value='fa-solid fa-hexagon'>Hexagone</option>
-            <option value='fa-solid fa-octagon'>Octogone</option>
-            <option value='fa-solid fa-spade'>Piques</option>
-            <option value='fa-solid fa-club'>Trèfles</option>
-            <option value='fa-solid fa-rhombus'>Carreaux</option>
             <option value='fa-solid fa-shapes'>Formes</option>
             <option value='fa-solid fa-plus'>Plus</option>
             <option value='fa-solid fa-minus'>Moins</option>
             <option value='fa-solid fa-xmark'>Croix</option>
-            <option value='fa-solid fa-slash-forward'>Slash</option>
+            <option value='fa-solid fa-divide'>Division</option>
+            <option value='fa-solid fa-slash'>Slash</option>
             <option value='fa-solid fa-hashtag'>Hashtag</option>
             <option value='fa-solid fa-list-ol'>Liste</option>
             <option value='fa-solid fa-lock'>Cadenas fermé</option>
@@ -160,16 +150,12 @@
             <option value='fa-solid fa-tag'>Tag</option>
             <option value='fa-solid fa-bell'>Cloche</option>
             <option value='fa-solid fa-crown'>Couronne</option>
-            <option value='fa-solid fa-swords'>Épées</option>
-            <option value='fa-solid fa-bullseye-arrow'>Cible</option>
-            <option value='fa-solid fa-music-note'>Croche</option>
-            <option value='fa-solid fa-music'>Double croche</option>
+            <option value='fa-solid fa-music'>Note de musique</option>
             <option value='fa-solid fa-user'>Utilisateur</option>
             <option value='fa-solid fa-user-group'>Double utilisateur</option>
             <option value='fa-solid fa-users'>Triple utilisateur</option>
-            <option value='fa-solid fa-user-robot'>Robot utilisateur</option>
-            <option value='fa-solid fa-robot'>Visage d'un robot</option>
-            <option value='fa-solid fa-skull'>Tête de mort</option>
+            <option value='fa-solid fa-robot'>Robot</option>
+            <option value='fa-solid fa-skull'>Crâne</option>
             <option value='fa-solid fa-hand'>Main</option>
             <option value='fa-solid fa-hands'>Applaudir</option>
             <option value='fa-solid fa-handshake-simple'>Poignée de main</option>

@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Forum</title>
         <link rel="stylesheet" href="../assets/css/style.css">
-        <link rel="stylesheet" href="https://rawcdn.githack.com/hung1001/font-awesome-pro-v6/44659d9/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
         <link rel=icon type=image/png href="../assets/images/favicon.png"/>
     </head>
     <header>
@@ -40,12 +40,12 @@
           }
       }
 
-      #Si l'utilisateur est connecté
+	    #Si l'utilisateur est connecté
       if($_SESSION['email'] != ''){
         $requete = "SELECT pseudoMemb, typeMemb FROM membre WHERE idMemb = '{$_SESSION['email']}'";
         $resultat = $cnn->query($requete) or die(print_r($bdd->errorInfo()));
         while($row = $resultat->fetch()){
-	  #On affiche la barre du haut du site selon son type
+			    #On affiche la barre du haut du site selon son type
           if($row['typeMemb'] == '0'){
             echo "<a href='../'><img class='logo' src='../assets/images/logo.png'></img></a> </a><p class='username admin'>{$row['pseudoMemb']}</p> <a href='../script/logout.php' class='button cl2' style='float: right;'>Déconnexion <i class='fas fa-sign-out-alt'></i></a> <a href='../account' class='button cl1' style='float: right;'>Mon compte <i class='fas fa-user-edit'></i></a> <a href='./' class='button cl3' style='float: right;'>Administration <i class='fas fa-user-shield'></i></a>";
           }
@@ -91,11 +91,11 @@
               echo "<p>Il n'y a pas d'utilisateur à administrer</p><a class='button cl1' href='../'>Retourner à l'accueil</a><br><br></div></center>";
             }
             else {
-	      #On récupère les informations du membre
+			        #On récupère les informations du membre
               $requete1 = "SELECT typeMemb FROM membre WHERE idMemb = '{$_SESSION['email']}'";
               $resultat1 = $cnn->query($requete1) or die(print_r($bdd->errorInfo()));
               while($row1 = $resultat1->fetch()){
-		#Si l'utilisateur est administrateur
+						    #Si l'utilisateur est administrateur
                 if($row1['typeMemb'] == '0'){
                   echo "
                   <p>Modifier les permissions d'un utilisateur :</p><br>
