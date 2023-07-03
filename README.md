@@ -72,7 +72,7 @@ Vous pouvez aussi changer les logos se situant dans `assets/images`
 Si les icônes de certification ou de type de membres ne vous plaisent pas, vous pouvez les changer dans ce fichier `config/badges.php`
 
 ```php
-    $certif = 'fa-solid fa-badge-check';
+    $certif = 'fa-solid fa-check';
     $mod = 'fa-solid fa-gears';
     $admin = 'fa-solid fa-shield-halved';
 ```
