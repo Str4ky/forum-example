@@ -5,7 +5,7 @@
 
     #Si les variables POST existent
     if(!empty($_POST)) {
-	    #On vérifie si un compte extsie déjà
+	#On vérifie si un compte extsie déjà
         if(isset($_POST['email']) AND isset($_POST['password'])){  
 
             #On initialise les variables en leurs retirant toute compréhension de code
