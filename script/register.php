@@ -23,7 +23,7 @@
                     return;
                 }
             }        
-		    #Sinon on créer un compte				
+	    #Sinon on créer un compte				
             $requete = "INSERT INTO membre (idMemb, pseudoMemb, dateIns, mdpMemb, typeMemb, certifMemb)
             VALUES ('$email', '$pseudo', CURDATE(), '$password', 2, 0)";
             $cnn->exec($requete) or die(print_r($bdd->errorInfo()));
